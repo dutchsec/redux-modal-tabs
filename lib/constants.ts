@@ -1,0 +1,4 @@
+export const ADD_MODAL_TAB = 'ADD_MODAL_TAB';
+export const REMOVE_MODAL_TAB = 'REMOVE_MODAL_TAB';
+export const OPEN_MODAL_TAB = 'OPEN_MODAL_TAB';
+export const CLOSE_MODAL_TAB = 'CLOSE_MODAL_TAB';
