@@ -1,6 +1,6 @@
 {
   "name": "redux-modal-tabs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Redux modal tabs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -23,10 +23,10 @@ npm install redux-modal-tabs
 import { reduxModalTabsReducer } from 'redux-modal-tabs';
 
 export const rootReducer = (history) => combineReducers({
-    router: connectRouter(history),
+    ...
 	reduxModalTabs: reduxModalTabsReducer
+	...
 });
-
 ```
 
 ### 2. Import the css (optional)
