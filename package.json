@@ -1,6 +1,6 @@
 {
   "name": "redux-modal-tabs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Redux modal tabs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,6 @@
   "devDependencies": {
     "@types/jest": "^23.3.12",
     "@types/react": "^16.7.22",
-    "@types/react-redux": "^7.0.1",
     "@types/redux": "^3.6.0",
     "jest": "^23.6.0",
     "react": "^16.4.2",
@@ -30,7 +29,7 @@
     "redux": "^4.0.1"
   },
   "dependencies": {
-    "@types/react-redux": "^6.0.0"
+    "@types/react-redux": "^6.0.13"
   },
   "repository": "dutchsec/redux-modal-tabs",
   "keywords": [
