@@ -1,4 +1,4 @@
-.modalTabs {
+.modalTabsVertical {
     position: fixed;
     z-index: 999999;
     bottom: 0;
@@ -10,11 +10,11 @@
     overflow: hidden;
 }
 
-.modalTabsCollapsed {
+.modalTabsVertical.modalTabsCollapsed {
     width: 50px;
 }
 
-.modalTabsList {
+.modalTabsVertical .modalTabsList {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -23,15 +23,15 @@
     width: 300px;
 }
 
-.modalTab {
+.modalTabsVertical .modalTab {
     color: white;
 }
 
-.modalTabActive {
+.modalTabsVertical .modalTabActive {
 
 }
 
-.modalTabHeader {
+.modalTabsVertical .modalTabHeader {
     background: rgba(0, 0, 0, 0.2);
     font-size: 1em;
     padding: 1rem;
@@ -43,38 +43,38 @@
     font-weight: bold;
 }
 
-.modalTabHeader:hover {
+.modalTabsVertical .modalTabHeader:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.modalTabActive .modalTabHeader {
+.modalTabsVertical .modalTabActive .modalTabHeader {
     background: none !important;
     border-bottom: none;
 }
 
-.modalTabContent {
+.modalTabsVertical .modalTabContent {
     padding: 0 1rem 2rem;
     border-bottom: 1px solid #1d1d1d;
 }
 
-.modalTab:last-child .modalTabContent {
+.modalTabsVertical .modalTab:last-child .modalTabContent {
     border-bottom: none;
 }
 
-.removeModalTab {
+.modalTabsVertical .removeModalTab {
     margin: 5px 0 0 5px;
     cursor: pointer;
 }
 
-.removeModalTab:hover {
+.modalTabsVertical .removeModalTab:hover {
     color: #888;
 }
 
-.modalTabButtons {
+.modalTabsVertical .modalTabButtons {
     display: flex;
 }
 
-.modalTabButton {
+.modalTabsVertical .modalTabButton {
     background: none;
     border: none;
     padding: 0 5px;
@@ -85,7 +85,7 @@
     height: 20px;
 }
 
-.modalTabArrow {
+.modalTabsVertical .modalTabArrow {
     width: 10px;
     height: 10px;
     border-bottom: 2px solid #fff;
@@ -97,18 +97,18 @@
     top: 1px;
 }
 
-.modalTabActive .modalTabArrow {
+.modalTabsVertical .modalTabActive .modalTabArrow {
     transform: rotate(225deg);
     top: 7px;
 }
 
-.modalTabCross {
+.modalTabsVertical .modalTabCross {
     font-size: 30px;
     position: absolute;
     top: -20px;
 }
 
-.modalTabsMinimize {
+.modalTabsVertical .modalTabsMinimize {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -122,16 +122,129 @@
     padding-left: 1rem;
 }
 
-.modalTabsMinimize:hover {
+.modalTabsVertical .modalTabsMinimize:hover {
     background: rgba(0, 0, 0, 0.3)
 }
 
-.modalTabArrowLeft {
+.modalTabsVertical .modalTabArrowLeft {
     top: 18px;
     transform: rotate(135deg);
 }
 
-.modalTabArrowRight {
+.modalTabsVertical .modalTabArrowRight {
     top: 18px;
     transform: rotate(315deg);
+}
+
+.modalTabsHorizontal {
+    position: fixed;
+    z-index: 2000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px -3px 34px 0px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.modalTabsHorizontal .modalTabsTop {
+    background: #000;
+    display: flex;
+    padding: 1px 10px 0;
+    position: relative;
+    flex-shrink: 0;
+    height: 41px;
+    flex-grow: 0;
+}
+
+.modalTabsHorizontal .modalTabsResize {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: -5px;
+    left: 0;
+    cursor: row-resize;
+}
+
+.modalTabsHorizontal .toggleModalTabsExpanded {
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.modalTabsHorizontal .modalTabsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+}
+
+.modalTabsHorizontal .modalTabItem {
+    margin: 5px 10px 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 5px 10px;
+    color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+.modalTabsHorizontal .closeModalTab {
+    margin: 5px 5px 0 5px;
+    cursor: pointer;
+    padding: 0 5px;
+    background: none;
+    border: none;
+    color: white;
+    position: relative;
+}
+
+.modalTabsHorizontal .modalTabCross {
+    font-size: 30px;
+    position: absolute;
+    top: -23px;
+}
+
+.modalTabsHorizontal .closeModalTab:hover {
+     color: #888;
+}
+
+.modalTabsHorizontal .modalTabItemActive {
+    background: #222;
+}
+
+.modalTabsHorizontal .modalTabContent {
+    background: #222;
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 200px;
+}
+
+.modalTabsHorizontal .toggleModalTabsExpanded {
+    border: none;
+    background: none;
+    color: white;
+}
+
+.modalTabsHorizontal .modalTabArrow {
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+}
+
+.modalTabsHorizontal.modalTabsExpanded .modalTabArrow {
+    transform: rotate(225deg);
+    top: 15px;
 }

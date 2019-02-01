@@ -43,7 +43,7 @@ class ModalTabs extends React.Component<Props, State> {
 		}
 
 		return (
-			<div className={'modalTabs '+ (expanded ? '' : ' modalTabsCollapsed')}>
+			<div className={'modalTabsVertical '+ (expanded ? '' : ' modalTabsCollapsed')}>
 				<ul className="modalTabsList">
 					{modalTabs.map(modalTab =>
 						<ModalTabComponent
